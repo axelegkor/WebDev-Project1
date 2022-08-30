@@ -15,7 +15,7 @@
       </div>
       <div class="gallery"></div>
       <div class="art1">
-        <svg class="painting">
+        <svg class="paintingSVG">
           <rect class="sky" width="524" height="350" x="0" y="0"/>
           <ellipse class="sunrays1" cx="262" cy="180" rx="600" ry="80"/>
           <ellipse class="sunrays2" cx="262" cy="215" rx="500" ry="60"/>
@@ -27,7 +27,9 @@
         </svg>
       </div>
       <div class="art2">
-      
+        <canvas id="paintingCanvas" class="paintingCanvas" width="524" height="350">
+        </canvas>
+        <script src="canvasPainting.js"></script>
       </div>
     </div>
   </body>

@@ -1,5 +1,5 @@
 body {
-  background-color: #2b00ff;
+  background-color: #000000;
 }
 
 div.grid-container {
@@ -19,7 +19,7 @@ div.text {
 }
 
 div.gallery {
-  background-color: white;
+  background-color: gold;
   grid-row-start: 3;
   grid-row-end: 15;
   grid-column-start: 1;
@@ -38,7 +38,7 @@ div.art1 {
 }
 
 div.art2 {
-  background-color: blue;
+  background-color: white;
   grid-row-start: 5;
   grid-row-end: 13;
   grid-column-start: 3;
@@ -72,7 +72,7 @@ p {
   line-height: 1.5em;
 }
 
-svg.painting {
+svg.paintingSVG {
   width: 100%;
   height: 100%;
   display: block;
@@ -80,7 +80,7 @@ svg.painting {
 }
 
 rect.sky {
-  fill: rgb(130, 186, 216);
+  fill: rgb(110, 157, 183);
 }
 
 ellipse.sunrays1 {
@@ -109,4 +109,11 @@ polygon.mountain1 {
 
 polygon.mountain2 {
   fill: rgb(174, 70, 0);
+}
+
+canvas.paintingCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: auto;
 }

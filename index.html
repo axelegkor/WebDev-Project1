@@ -5,31 +5,46 @@
   </head>
   <body>
     <div class="grid-container">
-      <div class="text">
+      <div class="introText">
         <h1>My art project</h1>
         <h2>About the artist</h2>
         <p>
-          My name is John Doe. I am a web developer and artist. My journey in the tough IT-world has inspired me to create art to express the deep emotions of the people I work with and myself.
-          I've seen the destiny of many men and women take widely different turns. The memories of these experiences have lead to beautiful dreams, dark nightmares, and this art project.
+          My name is John Doe. I am a web developer and artist. After an intense 
         </p>
       </div>
       <div class="gallery"></div>
       <div class="art1">
-        <svg class="paintingSVG">
-          <rect class="sky" width="524" height="350" x="0" y="0"/>
-          <ellipse class="sunrays1" cx="262" cy="180" rx="600" ry="80"/>
-          <ellipse class="sunrays2" cx="262" cy="215" rx="500" ry="60"/>
-          <ellipse class="sunrays3" cx="262" cy="240" rx="300" ry="40"/>
-          <circle class="sun" cx="262" cy="240" r="40" />
-          <rect class="ground" width="524" height="110" x="0" y="240"/>
-          <polygon class="mountain1" points="400,270 524,200 524,300"/>
-          <polygon class="mountain2" points="35,200 0,240 0,255 115,250"/>
+        <svg viewbox="0 0 524 350" id="paintingSVG" class="paintingSVG">
+          <rect id="sky" width="524" height="350" x="0" y="0"/>
+          <ellipse id="sunrays1" cx="262" cy="180" rx="600" ry="80"/>
+          <ellipse id="sunrays2" cx="262" cy="215" rx="500" ry="60"/>
+          <ellipse id="sunrays3" cx="262" cy="240" rx="300" ry="40"/>
+          <circle id="sunsetSun" cx="262" cy="240" r="40" />
+          <circle id="daySun" cx="262" cy="45" r="40"/>
+          <rect id="ground" width="524" height="110" x="0" y="240"/>
+          <circle id="moon" cx="150" cy="50" r="35" />
+          <polygon id="mountain1" points="400,270 524,200 524,300"/>
+          <polygon id="mountain2" points="35,200 0,240 0,255 115,250"/>
+          <image href="airplane.png" height="100" width="100" y="10">
+            <animate attributeName="x" from="-100" to="1900" dur="10s" repeatCount="indefinite"/>
+          </image>
         </svg>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="svgPainting.js"></script>
       </div>
       <div class="art2">
+        <img class="hidden" id="plane" src="airplane.png">
         <canvas id="paintingCanvas" class="paintingCanvas" width="524" height="350">
         </canvas>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="canvasPainting.js"></script>
+      </div>
+      <div class="documentation">
+        <h2>Documentation</h2>
+        <h3>Layout</h3>
+        <p>
+          
+        </p>
       </div>
     </div>
   </body>

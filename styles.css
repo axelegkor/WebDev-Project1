@@ -1,5 +1,10 @@
 body {
-  background-color: #000000;
+  background-color: black;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  margin: 0;
 }
 
 div.grid-container {
@@ -11,11 +16,12 @@ div.grid-container {
   row-gap: 50px;
 }
 
-div.text {
+div.introText {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 5;
+  margin: 0 50px 0 50px;
 }
 
 div.gallery {
@@ -47,6 +53,14 @@ div.art2 {
   z-index: 10;
 }
 
+div.documentation {
+  grid-row-start: 15;
+  grid-row-end: 20;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 0 50px 0 50px;
+}
+
 h1 {
   color: #fff;
   text-align: center;
@@ -63,6 +77,14 @@ h2 {
   margin: 50px 0 0 0;
 }
 
+h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+}
+
 p {
   color: #fff;
   text-align: center;
@@ -77,38 +99,7 @@ svg.paintingSVG {
   height: 100%;
   display: block;
   margin: auto;
-}
-
-rect.sky {
-  fill: rgb(110, 157, 183);
-}
-
-ellipse.sunrays1 {
-  fill: rgba(255, 25, 0, 0.697);
-}
-
-ellipse.sunrays2 {
-  fill: rgb(255, 115, 0);
-}
-
-ellipse.sunrays3 {
-  fill: rgba(241, 205, 0, 0.945);
-}
-
-circle.sun {
-  fill: rgb(234, 255, 0);
-}
-
-rect.ground {
-  fill: rgb(202, 124, 7);
-}
-
-polygon.mountain1 {
-  fill: rgb(174, 70, 0);
-}
-
-polygon.mountain2 {
-  fill: rgb(174, 70, 0);
+  cursor: pointer;
 }
 
 canvas.paintingCanvas {
@@ -116,4 +107,5 @@ canvas.paintingCanvas {
   height: 100%;
   display: block;
   margin: auto;
+  cursor: pointer;
 }

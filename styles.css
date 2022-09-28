@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(26, 40, 54);
   color: #ffffff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -21,7 +21,6 @@ div.introText {
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 5;
-  margin: 0 50px 0 50px;
 }
 
 div.gallery {
@@ -53,16 +52,25 @@ div.art2 {
   z-index: 10;
 }
 
-div.documentation {
+div.buttonSection {
   grid-row-start: 15;
-  grid-row-end: 20;
+  grid-row-end: 15;
   grid-column-start: 1;
   grid-column-end: 5;
   margin: 0 50px 0 50px;
+  text-align: center;
+}
+
+div.documentation {
+  grid-row-start: 15;
+  grid-row-end: 22;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 50px 0 0 0;
 }
 
 h1 {
-  color: #fff;
+  color: rgb(233, 200, 39);
   text-align: center;
   font-size: 2em;
   font-weight: bold;
@@ -70,28 +78,20 @@ h1 {
 }
 
 h2 {
-  color: #fff;
+  color: rgb(252, 222, 112);
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
   margin: 50px 0 0 0;
 }
 
-h3 {
-  color: #fff;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 20px 0 0 0;
-}
-
 p {
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-align: center;
   font-size: 1em;
   font-weight: bold;
-
-  line-height: 1.5em;
+  margin: 10px 200px 20px 200px;
+  line-height: 2em;
 }
 
 svg.paintingSVG {
@@ -108,4 +108,21 @@ canvas.paintingCanvas {
   display: block;
   margin: auto;
   cursor: pointer;
+}
+
+button.documentation-show {
+  background-color: rgb(147, 126, 8);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+}
+
+div.documentation {
+  display: none;
 }

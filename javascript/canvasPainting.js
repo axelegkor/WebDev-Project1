@@ -1,3 +1,5 @@
+//Functions are inspired by the W3Schools tutorial on Canvas: https://www.w3schools.com/html/html5_canvas.asp
+
 const c = document.getElementById("paintingCanvas");
 const ctx = c.getContext("2d");
 
@@ -79,6 +81,8 @@ function drawDaySky() {
   ctx.fillRect(0, 0, 524, 240);
 }
 
+
+// Inspired by https://stackoverflow.com/questions/16494262/how-to-draw-a-circle-with-centered-fadeing-out-gradients-with-html5-canvas
 function drawDaySun() {
   const grdDaySun = ctx.createRadialGradient(262, 45, 5, 262, 45, 60);
   grdDaySun.addColorStop(0, "yellow");

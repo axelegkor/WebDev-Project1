@@ -5,14 +5,19 @@
   </head>
   <body>
     <div class="grid-container">
+
       <div class="introText">
         <h1>My art project</h1>
         <h2>About the artist</h2>
         <p>
-          My name is John Doe. I am a web developer and artist. After an intense 
+          My name is John Doe. I am a web developer and artist. After an intense period at work, I decided to take a break and travel.
+          I got to see the wonders of the world, but also how elements from the modern world always come in the way of our appreciation of nature.
+          I got the inspiration for this project during my trip through the North African desert. I hope you enjoy it.
         </p>
       </div>
+
       <div class="gallery"></div>
+
       <div class="art1">
         <svg viewbox="0 0 524 350" id="paintingSVG" class="paintingSVG">
           <rect id="sky" width="524" height="350" x="0" y="0"/>
@@ -25,27 +30,81 @@
           <circle id="moon" cx="150" cy="50" r="35" />
           <polygon id="mountain1" points="400,270 524,200 524,300"/>
           <polygon id="mountain2" points="35,200 0,240 0,255 115,250"/>
-          <image href="airplane.png" height="100" width="100" y="10">
+          <image href="resources/airplane.png" height="100" width="100" y="10">
             <animate attributeName="x" from="-100" to="1900" dur="10s" repeatCount="indefinite"/>
           </image>
         </svg>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="svgPainting.js"></script>
+        <script src="javascript/svgPainting.js"></script>
       </div>
+
       <div class="art2">
-        <img class="hidden" id="plane" src="airplane.png">
+        <img class="hidden" id="plane" src="resources/airplane.png">
         <canvas id="paintingCanvas" class="paintingCanvas" width="524" height="350">
         </canvas>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="canvasPainting.js"></script>
+        <script src="javascript/canvasPainting.js"></script>
       </div>
-      <div class="documentation">
-        <h2>Documentation</h2>
-        <h3>Layout</h3>
+      
+      <div class="buttonSection">
+        <button onclick="hideShowDocumentation()" class="documentation-show" id="documentation-show">Show Documentation</button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="javascript/documentation.js"></script>
+      </div>
+
+      <div class="documentation" id="documentation">
+        <h2>Layout</h2>
         <p>
-          
+          For the layout of this website, I have used CSS-grid. CSS-grid allowed me to place the page's elements exactly where I wanted them.
+          I created a grid with four columns, all with the same size. This allowed me to have a mainly vertical structure of the site, but still being able to place elements besides each other.
+          This was used to place the two paintings next to each other in a symmetric way.
+        </p>
+        <h2>SVG & Canvas</h2>
+        <p>
+          The SVG elements are created directly in the HTML file. Most of them are pre-defined shapes, in which case I only had to decide the size and placement.
+          The exception is the mountains, which were created as polygons.
+          This means that the shapes were created from a set of points.
+          The coloring, which changes based on user-click, is defined in the svgPainting.js file.
+          This script fills the shapes with a certain color, based on what value of dayTimeIndexSvg.
+          When the user clicks on the painting, this value changes, and so does the colors.
+          The airplane is created and programmed entirely in HTML, using the “animate” element.
+          </p>
+        <p>
+          The Canvas elements are all drawn in the canvasPainting.js file.
+          The same shapes with different colors are created as separate elements.For each iteration of the setInterval function, the canvas is completely cleared, and new elements are drawn.
+          Most of the elements are gradient, which gives the painting a more dynamic and realistic look.
+          The elements are grouped as sunset/sunrise, day or night elements.
+          Which group is drawn is decided by the value of the dayTimeIndexCanvas variable.
+          The variable's value changes if a user clicks on the painting.
+          In every iteration of the setInterval function, the airplane is redrawn in a slightly different location to animate movement.
+          The movement of the plane is timed to give the illusion that the plane is the same one as in the SVG painting.
+        </p>
+        <h2>jQuery</h2>
+        <p>
+          For this project, I have used some jQuery functions.
+          The "click" function is used to change the value of the dayTimeIndexSvg and dayTimeIndexCanvas variables, upon clicking on the paintings.
+          The same function is also used to show and hide the documentation upon clicking on the "Show Documentation"/"Hide documentation" button.
+          jQuery is also used to write the logic for showing and hiding the documentation.
+          However the largest use of jQuery is in the svgPainting.js file, where it's used to paint the elements.
+        </p>
+        <h2>Testing</h2>
+        <p>
+          This website has been tested in Google Chrome, Mozilla Firefox and Microsoft Edge.
+        </p>
+        <h2>Resources</h2>
+        <p>
+          To complete this project, I have used a set of resources.
+          I already had a good knowledge of programming, however not so much with the technologies used in the project.
+          Therefore, the intro lecture provided some good basic knowledge of the technologies I was using.
+          To gain further understanding of how my project could be created, I used online resources.
+          I especially used W3schools to learn more about CSS, SVG, Canvas and jQuery.
+          I also looked at the documentation for the jQuery API. When I encountered problems, I Googled them.
+          This mostly lead me to forums like Stackoverflow, or to an article on a tutorial site, like W3schools.
+          Some code is directly inspired by an online resource, in which case there is a comment saying so.
+          For the canvasPainting.js file, there is a comment at the very top regarding code from the W3schools canvas tutorial.
         </p>
       </div>
+      
     </div>
   </body>
 </html>
